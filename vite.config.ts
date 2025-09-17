@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "", // <-- chemins relatifs pour production
+  base: "", // <- vide pour que les assets pointent correctement
   server: {
     host: "::",
     port: 8080,
@@ -14,12 +14,11 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "dist/spa", // <-- dossier de sortie pour Vercel
+    outDir: "dist/spa",
   },
   plugins: [
     react(),
-    // Express seulement en dev
-    mode === "development" ? expressPlugin() : undefined,
+    mode === "development" ? expressPlugin() : undefined
   ].filter(Boolean),
   resolve: {
     alias: {
@@ -28,6 +27,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
+;
 
 function expressPlugin(): Plugin {
   return {
