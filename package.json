@@ -20,6 +20,11 @@
     "format.fix": "prettier --write .",
     "typecheck": "tsc"
   },
+
+  "engines": {
+  "pnpm": "9.x"
+},
+ 
   "dependencies": {
     "@vercel/speed-insights": "^1.2.0",
     "dotenv": "^17.2.1",
