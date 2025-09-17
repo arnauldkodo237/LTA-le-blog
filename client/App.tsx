@@ -13,6 +13,7 @@ import Search from "./pages/Search";
 import Category from "./pages/Category";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const queryClient = new QueryClient();
 
